@@ -1,5 +1,13 @@
 const express = require('express');
+const fs = require("fs");
+const JSON_FILE = "src/mock/database.json";
+
 const { default: axios } = require('axios');
+
+const jsonData = fs.readFileSync(JSON_FILE);
+
+const data = JSON.parse(jsonData);
+
 const router = express.Router();
 router.get('/', function (req, res, next) {
     res.status(200).send({
@@ -10,8 +18,8 @@ router.get('/', function (req, res, next) {
 
 
 router.get('/teste', function (req, res, next) {
-    axios.get('https://jsonplaceholder.typicode.com/todos').then((response) => {
-        res.status(200).send(response.data);
-    });
+    const { todos = [] } = data;
+    res.status(200).send(todos);
+
 });
 module.exports = router;
