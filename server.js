@@ -1,4 +1,4 @@
-const app = require('../src/app');
+const app = require('./src/app');
 const port = appPort(process.env.PORT || '5000');
 function appPort(val) {
     const port = parseInt(val, 10);

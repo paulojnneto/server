@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "content": "finish todos app",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "content": "finish todos app",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "content": "finish todos app",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "content": "finish todos app",
+      "completed": false
+    }
+    
+  ]
+}
